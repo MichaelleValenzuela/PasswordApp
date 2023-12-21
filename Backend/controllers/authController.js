@@ -128,10 +128,20 @@ const admin = async (req, res) => {
   )
 }
 
+const obtenerUsuarios = async (req, res ) => {
+  console.log('desde obtener usuarios')
+}
+
+const cambiarEstado = async (req, res) => {
+  console.log('desde cambiar estado')
+}
+
 export {
   register,
   verificarCuenta,
   login,
   user,
-  admin
+  admin,
+  obtenerUsuarios,
+  cambiarEstado
 }

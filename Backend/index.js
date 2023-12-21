@@ -4,6 +4,7 @@ import cors from 'cors'
 import {db} from './config/db.js'
 import loginRoutes from './routes/loginRoutes.js' //si NO es una dependencia hay q colocar el -> .js
 import authRoutes from './routes/authRoutes.js'
+//import adminRoutes from './routes/adminRoutes.js'//
 
 //Variables de entorno
 dotenv.config()
@@ -38,6 +39,7 @@ app.use(cors(corsOptions)) //Habilitando cors
 //Definir una ruta
 app.use('/login', loginRoutes)
 app.use('/auth', authRoutes)
+//app.use('/administrador', adminRoutes)//
 
 //Definir puerto
 const PORT = process.env.PORT || 4000 //process.env.PORT asigna el puerto de las variables de entorno
